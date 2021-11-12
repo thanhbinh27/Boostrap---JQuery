@@ -1,0 +1,221 @@
+:root {
+    --color-green: #1d809f;
+    --color-green-dark: #17667f;
+    --color-dark: #343a40;
+    --color-yellow: #ffc107;
+}
+
+body {
+    font-family: "Source Sans Pro" !important;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.menu-toggle {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    background-color: rgba(52, 58, 68, 0.5);
+    text-align: center;
+    line-height: 50px;
+    right: 15px;
+    top: 15px;
+}
+
+.menu-toggle:hover {
+    background-color: var(--color-dark);
+    color: #fff
+}
+
+.offcanvas {
+    background-color: var(--color-green) !important;
+    color: #fff;
+    width: 250px
+}
+
+.offcanvas ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.offcanvas a {
+    color: #fff;
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+}
+
+.offcanvas a:hover {
+    background-color: rgba(52, 58, 64, 0.2);
+    color: #fff;
+}
+
+.offcanvas-body {
+    padding: 0 !important;
+    margin: 0;
+}
+
+.offcanvas-header {
+    background-color: rgba(52, 58, 64, 0.1);
+}
+
+header {
+    background: url("../img/bg-masthead.jpg");
+    background-repeat: none ;
+    background-position: center center ;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+h1 {
+    font-weight: 700 !important;
+    font-size: 5.5rem !important;
+}
+
+h2 {
+    font-weight: 700 !important;
+    font-size: 1.5rem !important;
+}
+
+h3 {
+    font-weight: 700 !important;
+    font-size: 1.75rem !important;
+    font-style: italic;
+}
+
+h4 {
+    font-weight: 700 !important;
+    font-size: 1.0rem !important;
+    text-transform: uppercase;
+    color: var(--color-yellow) !important;
+}
+
+p {
+    font-weight: 300 !important;
+    font-size: 1.25rem;
+}
+
+.btn-primary {
+    background-color: var(--color-green);
+    border-color: var(--color-green) !important;
+}
+
+.btn-primary:active, .btn-primary:hover {
+    background-color: var(--color-green-dark) !important;
+    border-color: var(--color-green-dark) !important;
+}
+
+.btn-xl {
+    padding: 1.25rem 2.5rem !important;
+}
+
+#about { min-height: 100vh; }
+
+#services { 
+    min-height: 100vh; 
+    background-color: var(--color-green);
+    color: #fff;
+}
+
+.services-ico { 
+    background-color: #fff !important;
+    color: var(--color-green);
+    height: 7rem;
+    width: 7rem;
+    line-height: 7rem;
+    text-align: center;
+    display: block;
+    font-size: 2.5rem;
+    border-radius: 50%;
+}
+
+#callout {
+    min-height: 100vh;
+    background: url("../img/bg-callout.jpg");
+    background-repeat: none;
+    background-position: top center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#portfolio {
+    min-height: 100vh;
+    padding: 100px 0;
+}
+
+.portfolio-item {
+    margin: 0;
+    text-decoration: none;
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-item img {
+    transition: clip-path 0.25s ease-out, -webkit-transform 0.25s ease-out;
+    -webkit-clip-path: inset(-1px);
+    clip-path: inset(-1px);
+    max-width: 100%;
+}
+
+.portfolio-item:hover img {
+    -webkit-clip-path: inset(2rem);
+    clip-path: inset(2rem);
+}
+
+.caption {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(33, 37, 41, 0.2);
+    color: #fff;
+    text-align: left;
+    padding: 50px;
+    z-index: 1;
+    font-size: 1rem;
+
+    transition: background-color 0.7s, webkit-clip-path 0.25s ease-out;
+    transition: clip-path 0.25s ease-out, background-color 0.7s;
+    transition: clip-path 0.25s ease-out, background-color 0.7s, -webkit-clip-path 0.25s ease-out;
+    -webkit-clip-path: inset(0px);
+    clip-path: inset(0px);
+}
+
+.portfolio-item:hover .caption {
+    -webkit-clip-path: inset(2rem);
+    clip-path: inset(2rem);
+    background-color: rgba(33, 37, 41, 0.75);
+    padding: 10px 50px;
+}
+
+.caption div {
+    margin-top: 8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+#action {
+    min-height: 100vh;
+    background-color: var(--color-green);
+}
+
+#action h3 {
+    color: #fff;
+}
+
+#map, #footer { min-height: 50vh; }
+
+.footer-icon {
+    display: inline-block;
+    font-size: 6rem;
+    color: var(--color-green);
+    padding-left: 50px;
+    padding-right: 50px;
+}

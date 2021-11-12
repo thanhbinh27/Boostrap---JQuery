@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/favicon.ico">
+    <title>Demo 08</title>
+</head>
+
+<body>
+    <h1>Demo 08</h1>
+
+    <label>Input value a </label>
+    <input id="inputA" type="text">
+  
+    <label>Input value b</label>
+    <input id="inputB" type="text">
+    
+    <br>
+    
+    <button id="but1" type="button">+</button>
+    <button id="but2" type="button">-</button>
+    <button id="but3" type="button">X</button>
+    <button id="but4" type="button">:</button>
+
+    <div>
+        Result: <span></span>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("div").css("margin", "5px")
+
+            $("#but1").click(function () {
+                // var valueA = $("#inputA").val();
+                // var valueB = $("#inputB").val();
+                // $("div").text(Number(valueA) + Number(valueB));
+
+                var valueA = parseInt($("#inputA").val());
+                var valueB = parseInt($("#inputB").val());
+                $("span").text(Number(valueA) + Number(valueB));
+            });
+
+            $("#but2").click(function () {
+                var valueA = parseInt($("#inputA").val());
+                var valueB = parseInt($("#inputB").val());
+                $("span").text(valueA - valueB);
+            });
+
+            $("#but3").click(function () {
+                var valueA = parseInt($("#inputA").val());
+                var valueB = parseInt($("#inputB").val());
+                $("span").text(valueA * valueB);
+            });
+
+            $("#but4").click(function () {
+                var valueA = parseInt($("#inputA").val());
+                var valueB = parseInt($("#inputB").val());
+                if (valueB == 0) {
+                    $("span").text("No solution");
+                } else {
+                    $("span").text((valueA / valueB).toFixed(2));
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
